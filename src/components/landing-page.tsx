@@ -58,12 +58,12 @@ export default function LandingPage() {
         {/* Animated Grid Background */}
         <AnimatedGrid />
 
-        <div className="px-4 md:px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center text-center space-y-8">
             {/* Badge */}
             <Badge
               variant="secondary"
-              className="px-4 py-2 bg-card/50 backdrop-blur-sm border-primary/20 stagger-animation"
+              className="px-4 py-2 bg-card/50 backdrop-blur-sm border-primary/20 rounded-full stagger-animation"
               style={{ animationDelay: "0.1s" }}
             >
               <Zap className="h-4 w-4 mr-2 text-primary" />
@@ -169,7 +169,7 @@ export default function LandingPage() {
 
       {/* Features Section */}
       <section id="features" className="py-20 bg-muted/30">
-        <div className="px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Everything You Need to{" "}
@@ -205,7 +205,7 @@ export default function LandingPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary via-blue-600 to-primary">
-        <div className="px-4 md:px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="text-center text-white">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Ready to Build Something Amazing?
