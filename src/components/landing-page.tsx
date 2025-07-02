@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Badge } from "./ui/badge";
 import { AnimatedGrid } from "./animated-grid";
 import { Code, Palette, Search, Smartphone, Users } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
 export default function LandingPage() {
   const features = [
@@ -198,6 +199,106 @@ export default function LandingPage() {
                   delay={index * 100}
                 />
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" className="py-20">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              Simple,{" "}
+              <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+                Transparent Pricing
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Choose the perfect plan for your needs. Upgrade or downgrade at any time.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                name: "Starter",
+                price: "Free",
+                description: "Perfect for personal projects",
+                features: ["1 Website", "Basic Templates", "Mobile Responsive", "SSL Certificate", "Community Support"],
+                cta: "Get Started",
+                popular: false,
+              },
+              {
+                name: "Professional",
+                price: "$19",
+                description: "Best for growing businesses",
+                features: [
+                  "5 Websites",
+                  "Premium Templates",
+                  "Custom Domain",
+                  "Advanced SEO Tools",
+                  "Priority Support",
+                  "Team Collaboration",
+                ],
+                cta: "Start Free Trial",
+                popular: true,
+              },
+              {
+                name: "Enterprise",
+                price: "$49",
+                description: "For large organizations",
+                features: [
+                  "Unlimited Websites",
+                  "White Label Solution",
+                  "Advanced Analytics",
+                  "Custom Integrations",
+                  "Dedicated Support",
+                  "SLA Guarantee",
+                ],
+                cta: "Contact Sales",
+                popular: false,
+              },
+            ].map((plan, index) => (
+              <Card
+                key={index}
+                className={`relative ${plan.popular ? "border-purple-200 shadow-xl scale-105" : "border-gray-200"}`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <Badge className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1">
+                      Most Popular
+                    </Badge>
+                  </div>
+                )}
+                <CardHeader className="text-center pb-8">
+                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                  <div className="mt-4">
+                    <span className="text-4xl font-bold">{plan.price}</span>
+                    {plan.price !== "Free" && <span className="text-gray-600">/month</span>}
+                  </div>
+                  <CardDescription className="mt-2">{plan.description}</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="space-y-3">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    className={`w-full mt-8 ${
+                      plan.popular
+                        ? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                        : ""
+                    }`}
+                    variant={plan.popular ? "default" : "outline"}
+                  >
+                    {plan.cta}
+                  </Button>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
