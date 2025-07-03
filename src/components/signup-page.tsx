@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils"
 import { authClient } from "@/lib/auth-client"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
 interface FormStepOneProps {
   className?: string
@@ -192,9 +193,9 @@ export function Signup({ className }: FormStepOneProps) {
 
         <p className="text-center text-sm text-muted-foreground">
           Already have an account?{" "}
-          <a href="#" className="text-primary hover:underline font-medium">
-            Sign in
-          </a>
+          <Link href="/agency/login" className="text-primary hover:underline font-medium">
+            Log in
+          </Link>
         </p>
       </CardContent>
     </Card>

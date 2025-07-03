@@ -1,18 +1,13 @@
+import { AnimatedGrid } from "@/components/animated-grid";
 import { Signup } from "@/components/signup-page";
-import { auth } from "@/lib/auth";
-import { headers } from "next/headers";
-import { redirect } from "next/navigation";
 
-export default async function Page() {
-    const session = await auth.api.getSession({
-        headers: await headers()
-    })
- 
-    if(session) {
-        redirect("/agency")
-    }
+export default function Page() {
     return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="min-h-screen bg-background transition-colors duration-300">
+            {/* Background Effects */}
+            <div className="fixed inset-0 z-0">
+                <AnimatedGrid />
+            </div>
             <main className="container mx-auto px-4 py-8 md:py-16">
                 <div className="max-w-2xl mx-auto">
                     <Signup />
