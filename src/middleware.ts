@@ -5,7 +5,7 @@ export async function middleware(request: NextRequest) {
 	const cookies = getSessionCookie(request);
     const pathname = request.nextUrl.pathname
 	if (!cookies) {
-		return NextResponse.redirect(new URL("/agency/sign-up", request.url));
+		return NextResponse.redirect(new URL("/agency/login", request.url));
 	}
 
     if(cookies && pathname.startsWith('/agency/sign-up')) {
