@@ -13,7 +13,7 @@ export default function Layout({
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
             <Image
               src={"/noBgWhite.png"}
@@ -46,7 +46,7 @@ export default function Layout({
 
       {/* Footer */}
       <footer className="border-t bg-card/30 backdrop-blur-sm py-8 mt-auto">
-        <div className="container px-4">
+        <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
               © 2025 Vectora. All rights reserved.

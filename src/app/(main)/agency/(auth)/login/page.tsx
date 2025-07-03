@@ -14,7 +14,7 @@ export default function SignInPage() {
         <AnimatedGrid />
       </div>
       {/* Main Content */}
-      <main className="container px-4 py-8 md:py-16">
+      <main className="container mx-auto px-4 py-8 md:py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left Side - Marketing Content */}
           <div className="space-y-8 text-center lg:text-left">
