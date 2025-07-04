@@ -1,5 +1,5 @@
-import { AnimatedGrid } from "@/components/animated-grid";
-import { Signup } from "@/components/signup-page";
+import { AnimatedGrid } from "@/components/site/animated-grid";
+import { Signup } from "@/components/forms/signup-page";
 
 export default function Page() {
     return (

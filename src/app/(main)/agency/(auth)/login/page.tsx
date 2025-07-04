@@ -1,7 +1,7 @@
 "use client"
 
-import { SignInForm } from "@/components/sign-in-form"
-import { AnimatedGrid } from "@/components/animated-grid"
+import { SignInForm } from "@/components/forms/sign-in-form"
+import { AnimatedGrid } from "@/components/site/animated-grid"
 import { Shield, Zap, Users } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
