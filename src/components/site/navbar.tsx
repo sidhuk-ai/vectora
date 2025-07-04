@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { createAuthClient } from "better-auth/react";
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
@@ -82,13 +82,15 @@ export default function Navbar() {
               Sign out
             </Button>
           ) : (
-            <Link href={session?.user ? "/agency" : "/agency/sign-up"}>
+            <Link href={"/agency/sign-up"}>
               <Button variant="ghost">{"Sign up"}</Button>
             </Link>
           )}
-          <Button className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90">
-            Get Started
-          </Button>
+          <Link href={'/agency'}>
+            <Button className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90">
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

@@ -1,5 +1,5 @@
-import LandingPage from "@/components/landing-page";
-import Navbar from "@/components/navbar";
+import LandingPage from "@/components/site/landing-page";
+import Navbar from "@/components/site/navbar";
 
 export default function Home() {
   return (

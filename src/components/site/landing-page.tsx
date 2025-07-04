@@ -1,10 +1,10 @@
 "use client";
 import { ArrowRight, Check, Play, Zap } from "lucide-react";
-import { Button } from "./ui/button";
-import { FeatureCard } from "./site/feature-card";
+import { Button } from "@/components/ui/button";
+import { FeatureCard } from "@/components/site/feature-card";
 import Image from "next/image";
-import { Badge } from "./ui/badge";
-import { AnimatedGrid } from "./site/animated-grid";
+import { Badge } from "@/components/ui/badge";
+import { AnimatedGrid } from "@/components/site/animated-grid";
 import { Code, Palette, Search, Smartphone, Users } from "lucide-react";
 import {
   Card,
@@ -12,7 +12,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
+} from "@/components/ui/card";
 import { price } from "@/lib/constants";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
