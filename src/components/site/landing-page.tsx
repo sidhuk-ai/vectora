@@ -1,10 +1,10 @@
 "use client";
 import { ArrowRight, Check, Play, Zap } from "lucide-react";
 import { Button } from "./ui/button";
-import { FeatureCard } from "./feature-card";
+import { FeatureCard } from "./site/feature-card";
 import Image from "next/image";
 import { Badge } from "./ui/badge";
-import { AnimatedGrid } from "./animated-grid";
+import { AnimatedGrid } from "./site/animated-grid";
 import { Code, Palette, Search, Smartphone, Users } from "lucide-react";
 import {
   Card,
