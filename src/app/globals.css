@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import "uploadthing/tw/v4";
+@source "../../node_modules/@uploadthing/react/dist";
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -437,4 +439,79 @@
   .backdrop-blur-sm {
     backdrop-filter: blur(4px);
   }
+}
+
+.form-section {
+  @apply space-y-6 p-6 rounded-lg border bg-card/30;
+}
+.focus-visible\:ring-primary:focus-visible {
+  --tw-ring-color: hsl(var(--primary));
+}
+
+/* Enhanced Input Styles */
+input:focus,
+select:focus,
+textarea:focus {
+  @apply ring-2 ring-primary/20 border-primary;
+}
+
+/* File Upload Enhancements */
+.file-upload-area {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.file-upload-area:hover {
+  @apply border-primary/50 bg-muted/50;
+}
+
+/* Form Validation Styles */
+.field-error {
+  @apply border-destructive focus:border-destructive ring-destructive/20;
+}
+
+.field-success {
+  @apply border-green-500 focus:border-green-500 ring-green-500/20;
+}
+
+/* Switch Component Enhancements */
+[data-state="checked"] {
+  @apply bg-primary;
+}
+
+/* Select Component Enhancements */
+[data-placeholder] {
+  @apply text-muted-foreground;
+}
+
+/* Button Hover Effects */
+.btn-gradient {
+  @apply bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90;
+  @apply transition-all duration-300;
+}
+
+/* Card Hover Effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/5;
+}
+
+/* Image Preview Styles */
+.image-preview {
+  @apply relative overflow-hidden rounded-lg bg-muted;
+}
+
+.image-preview img {
+  @apply object-cover transition-transform duration-300 hover:scale-105;
+}
+
+/* Form Section Dividers */
+.section-divider {
+  @apply flex items-center gap-2 pb-2 border-b border-border/50;
+}
+
+.section-divider h3 {
+  @apply text-lg font-semibold text-foreground;
+}
+
+.section-divider svg {
+  @apply h-5 w-5 text-primary;
 }
