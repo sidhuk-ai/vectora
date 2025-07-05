@@ -19,7 +19,7 @@ export async function verifyAndAcceptInvitation() {
     if(invitationExist) {
         const newUser = await createTeamUser(invitationExist.agencyId,{
             name: authuser.user.name,
-            avatarUrl: authuser.user.image as string,
+            image: authuser.user.image as string,
             role: invitationExist.role,
             email: authuser.user.email,
             id: authuser.user.id,
